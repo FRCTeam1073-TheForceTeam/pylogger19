@@ -1,0 +1,17 @@
+# PyLogger Service
+[Unit]
+Description=FRC 1073 PyLogger Service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+WorkingDirectory=/home/pi/
+ExecStart=/usr/bin/python3 logserver.py
+
+[Install]
+WantedBy=multi-user.target
+
+
